@@ -1,0 +1,12 @@
+interface:
+  display_name: Actual Goal
+  short_description: Make prompts pursue the real goal, not a proxy
+  default_prompt: Use $actual-goal to audit and rewrite this prompt so it serves the
+    real-world goal instead of an easy-to-game proxy.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
