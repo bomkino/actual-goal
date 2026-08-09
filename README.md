@@ -22,6 +22,17 @@ For a global Codex installation:
 npx skills add bomkino/actual-goal -a codex -g
 ```
 
+For ChatGPT Work (cloud), download
+[`actual-goal.skill.zip`](https://github.com/bomkino/actual-goal/releases/latest/download/actual-goal.skill.zip),
+then open **Plugins → Skills → Create** and upload the archive. `SKILL.md` sits at
+the archive root, as ChatGPT expects.
+
+Maintainers can rebuild the same uploadable archive locally:
+
+```bash
+bash scripts/package-chatgpt.sh
+```
+
 The repository follows the open Agent Skills format and can also be installed into
 other compatible agents through the [Skills CLI](https://skills.sh/).
 

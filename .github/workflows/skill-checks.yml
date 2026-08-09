@@ -1,0 +1,21 @@
+name: skill checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ChatGPT upload archive
+        run: bash scripts/package-chatgpt.sh
+      - name: Inspect archive root
+        run: |
+          unzip -Z1 dist/actual-goal.skill.zip | sort
+          unzip -Z1 dist/actual-goal.skill.zip | grep -qx 'SKILL.md'
